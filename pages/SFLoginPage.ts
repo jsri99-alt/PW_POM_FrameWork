@@ -10,6 +10,7 @@ export class SFLoginPage {
         this.sfpage = sfpage
     }
     async login() {
+        console.log('DEBUG: URL is', process.env.salesForce_Url);
         let SF_Url = process.env.salesForce_Url as string
         await this.sfpage.goto(SF_Url)
         await this.sfpage.getByRole("textbox", { name: "username" }).fill(LoginDetail.userName)
