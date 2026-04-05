@@ -9,9 +9,9 @@ export class SFHomePage {
         await this.sfpage.waitForTimeout(1000)
         await this.sfpage.getByRole("button", { name: "View All Applications" }).click()
         await this.sfpage.waitForTimeout(3000)
-        await this.sfpage.getByRole("combobox", { name: "Search apps or items..." }).fill("tasks")
+        await this.sfpage.getByRole("combobox", { name: "Search apps or items..." }).fill("Tasks")
         await this.sfpage.waitForTimeout(1000)
-        await this.sfpage.locator(`//mark[contains(text(),'Tasks')]`).click()
+        await this.sfpage.locator(`//mark[contains(text(),"Tasks")]`).click()
         await this.sfpage.waitForTimeout(1000)
     }
     async launchNewTask(){
