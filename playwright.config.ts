@@ -1,4 +1,6 @@
 import { defineConfig, devices } from '@playwright/test';
+import process from 'process';
+//import process from 'process';
 
 /**
  * Read environment variables from file.
@@ -23,8 +25,7 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
-    ['html'],['allure-playwright',{outputfolder:"allure-results"}]
-  ],
+    ['html'],['allure-playwright']],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */

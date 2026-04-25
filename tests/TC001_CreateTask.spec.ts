@@ -10,7 +10,7 @@ const taskFormValue: any[] = parse(fs.readFileSync("Test Data/TaskForm.csv"),
 )
 
 test.use({ storageState: "Helper/TL_loginUser1.json" })
-test("CreateTask", async ({ SFHome, SFTask, page }) => {
+test("CreateTask", {tag:['@smoke']}, async ({ SFHome, SFTask, page }) => {
     test.info().annotations.push(
         { type: 'Hands on', description: "Frame work testing" },
         { type: 'author', description: 'Sriram' }
