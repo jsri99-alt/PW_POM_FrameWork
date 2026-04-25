@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"name": "Playwright workspace",
+			"path": "../../Playwright workspace"
+		},
+		{
+			"name": "POM Framework handson",
+			"path": ".."
+		},
+		{
+			"name": "SonicFramework-main",
+			"path": "../../Documents/Playwright/SonicFramework-main"
+		},
+		{
+			"path": "../../Documents/Playwright/Sika_FrameWork"
+		},
+		{
+			"path": "../../Documents/Playwright/PW BDD framework"
+		},
+		{
+			"path": "../../BDD Framework handson"
+		}
+	],
+	"settings": {}
+}
