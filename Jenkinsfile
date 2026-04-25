@@ -26,7 +26,16 @@ pipeline {
     post {
         always {
             // This captures your test results
-            junit '**/test-results/**/*.xml'
+            //junit '**/test-results/**/*.xml'
+                        // Replaces the 'junit' step to render Playwright's native HTML report
+            publishHTML([
+                allowMissing: false,
+                alwaysLinkToLastBuild: true,
+                keepAll: true,
+                reportDir: 'playwright-report',
+                reportFiles: 'index.html',
+                reportName: 'Playwright Test Report'
+            ])
         }
     }
 }
